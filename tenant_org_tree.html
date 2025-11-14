@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Estructura de nodos — Ministerio de Salud</title>
+<style>
+  *{box-sizing:border-box} body{margin:0;background:#f6f7fb;color:#0f172a}
+  .layout{max-width:1120px;margin:0 auto}
+  header,footer{background:#fff;border-bottom:1px solid #e2e8f0}
+  footer{border-top:1px solid #e2e8f0;border-bottom:none}
+  .bar{padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+  main{padding:24px 20px}
+  .card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px}
+  h1{font-size:18px;margin:0}
+  nav{color:#64748b;font-size:13px}
+  h2{font-size:18px;margin:0 0 10px 0}
+  .muted{color:#64748b}
+  .btn{display:inline-block;border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px;background:#f8fafc;color:#0f172a;text-decoration:none;font-size:14px}
+  .btn:hover{background:#eef2f7}
+  .grid{display:grid;gap:16px}
+  .g12{grid-template-columns:repeat(12,1fr)}
+  .col-4{grid-column:span 4} .col-6{grid-column:span 6} .col-8{grid-column:span 8} .col-12{grid-column:span 12}
+  .row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+  label{font-size:14px;display:block;margin:6px 0 2px 0}
+  input,select,textarea{width:100%;padding:8px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;background:#fff;color:#0f172a}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:10px;border-top:1px solid #e2e8f0}
+  thead th{color:#64748b;font-weight:600;border-top:none}
+  .kpi{border:1px solid #e2e8f0;border-radius:10px;padding:12px}
+  .kpi .lbl{color:#64748b;font-size:12px} .kpi .val{font-size:22px;font-weight:700}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#e5e7eb;color:#111827}
+  a.link{color:#1d4ed8;text-decoration:underline}
+</style>
+</head><body>
+<header><div class="layout bar"><h1>Hearty Pro — MVP (Wireframes)</h1><nav>Administración SaaS › Tenants › Estructura</nav></div></header>
+<main class="layout">
+  <div class="grid g12">
+    <section class="col-4 card">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <h2>Ministerio de Salud — Estructura</h2>
+        <div class="row"><a class="btn" href="#">Nuevo hijo</a><a class="btn" href="#">Mover</a><a class="btn" href="#">Eliminar</a></div>
+      </div>
+      <ul style="line-height:1.9;margin:0 0 0 18px">
+        <li>Red Ministerio
+          <ul>
+            <li>Hospital Central (MS-HC)
+              <ul><li>Cardiología</li><li>Diagnóstico remoto</li></ul>
+            </li>
+            <li>Hospital del Sur (MS-HS)</li>
+            <li>Centro Diagnóstico Norte (MS-CDN)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="col-8 card">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <h2>Resumen del nodo</h2>
+        <div class="muted">Red Ministerio → Hospital Central</div>
+      </div>
+      <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:8px">
+        <div class="kpi"><div class="lbl">Estudios (mes)</div><div class="val">1.200</div></div>
+        <div class="kpi"><div class="lbl">% Discrepancia</div><div class="val">6.5%</div></div>
+        <div class="kpi"><div class="lbl">Médicos activos</div><div class="val">18</div></div>
+      </div>
+      <div style="margin-top:12px"><a class="link" href="kpis_node.html">Ver KPIs</a> · <a class="link" href="org_node_detail.html">Detalle del nodo</a></div>
+    </section>
+  </div></main>
+<footer><div class="layout bar"><div class="muted">Generado 2025-11-12 — Hearty Pro MVP (offline)</div></div></footer>
+</body></html>

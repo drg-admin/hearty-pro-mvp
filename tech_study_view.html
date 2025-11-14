@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Estudio — Detalle (Técnico)</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#f6f7fb;color:#0f172a}
+.layout{max-width:1120px;margin:0 auto}
+header,footer{background:#fff;border-bottom:1px solid #e2e8f0}
+footer{border-top:1px solid #e2e8f0;border-bottom:none}
+.bar{padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+main{padding:24px 20px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px}
+h1{font-size:18px;margin:0} nav{color:#64748b;font-size:13px}
+h2{font-size:18px;margin:0 0 10px 0}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start}
+.kv{display:grid;grid-template-columns:160px 1fr;gap:8px;font-size:14px}
+.kv .k{color:#64748b}
+.box{border:1px dashed #cbd5e1;border-radius:8px;height:260px;display:flex;align-items:center;justify-content:center;color:#94a3b8}
+.btn{display:inline-block;border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px;background:#f8fafc;color:#0f172a;text-decoration:none;font-size:14px}
+.btn:hover{background:#eef2f7}
+.muted{color:#64748b;font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#e5e7eb;color:#111827}
+</style>
+</head>
+<body>
+<header><div class="layout bar"><h1>Hearty Pro — MVP (Wireframes)</h1><nav>Inicio › Cargas técnicas › Estudio</nav></div></header>
+<main class="layout">
+  <div class="row">
+    <section class="card" style="flex:1 1 56%">
+      <h2>Archivo (PDF)</h2>
+      <div class="box">[PDF aquí]</div>
+      <div class="row" style="margin-top:12px">
+        <a class="btn" href="tech_upload_new.html">Reemplazar archivo</a>
+        <a class="btn" href="tech_my_uploads.html">Volver a la lista</a>
+      </div>
+    </section>
+    <section class="card" style="flex:1 1 42%">
+      <h2>Datos del estudio</h2>
+      <div class="kv">
+        <div class="k">ID</div><div>ST-1001</div>
+        <div class="k">Paciente</div><div>J. Pérez</div>
+        <div class="k">Fecha</div><div>2025-10-20</div>
+        <div class="k">Nodo</div><div>Hospital Central</div>
+        <div class="k">Estado</div><div><span class="tag">Pendiente</span></div>
+      </div>
+      <div style="margin-top:12px"><div class="muted">Observaciones del técnico</div><div>-</div></div>
+      <div class="muted" style="margin-top:12px">MVP: Estado cambia automáticamente cuando el médico informa.</div>
+    </section>
+  </div>
+</main>
+<footer><div class="layout bar"><div class="muted">Hearty Pro MVP (offline)</div></div></footer>
+</body></html>
