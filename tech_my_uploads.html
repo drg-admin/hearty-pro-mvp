@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cargas técnicas — Mis estudios</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#f6f7fb;color:#0f172a}
+.layout{max-width:1120px;margin:0 auto}
+header,footer{background:#fff;border-bottom:1px solid #e2e8f0}
+footer{border-top:1px solid #e2e8f0;border-bottom:none}
+.bar{padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+main{padding:24px 20px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px}
+h1{font-size:18px;margin:0} nav{color:#64748b;font-size:13px}
+h2{font-size:18px;margin:0 0 10px 0}
+.btn{display:inline-block;border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px;background:#f8fafc;color:#0f172a;text-decoration:none;font-size:14px}
+.btn:hover{background:#eef2f7}
+input{width:100%;padding:8px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:10px;border-top:1px solid #e2e8f0}
+thead th{color:#64748b;font-weight:600;border-top:none}
+.link{color:#1d4ed8;text-decoration:underline}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#e5e7eb;color:#111827}
+.muted{color:#64748b;font-size:12px}
+</style>
+</head>
+<body>
+<header><div class="layout bar"><h1>Hearty Pro — MVP (Wireframes)</h1><nav>Inicio › Cargas técnicas › Mis estudios</nav></div></header>
+<main class="layout">
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <h2>Mis estudios cargados</h2>
+      <a class="btn" href="tech_upload_new.html">Subir PDF</a>
+    </div>
+    <table style="margin-top:8px">
+      <thead><tr><th>ID</th><th>Paciente</th><th>Fecha</th><th>Estado</th><th></th></tr></thead>
+      <tbody>
+        <tr>
+          <td>ST-1001</td><td>J. Pérez</td><td>2025-10-20</td><td><span class="tag">Pendiente</span></td>
+          <td><a class="link" href="tech_study_view.html?id=ST-1001">Ver</a></td>
+        </tr>
+        <tr>
+          <td>ST-1002</td><td>M. López</td><td>2025-10-22</td><td><span class="tag">En revisión</span></td>
+          <td><a class="link" href="tech_study_view.html?id=ST-1002">Ver</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="muted" style="margin-top:8px">Tip: acá después se puede filtrar/buscar por ID, paciente, fecha y estado.</div>
+  </div>
+</main>
+<footer><div class="layout bar"><div class="muted">Hearty Pro MVP (offline)</div></div></footer>
+</body></html>
