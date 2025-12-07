@@ -1,55 +1,200 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Studie — Medical report</title>
-<style>
-  *{box-sizing:border-box} body{margin:0;background:#f6f7fb;color:#0f172a}
-  .layout{max-width:1120px;margin:0 auto}
-  header,footer{background:#fff;border-bottom:1px solid #e2e8f0}
-  footer{border-top:1px solid #e2e8f0;border-bottom:none}
-  .bar{padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-  main{padding:24px 20px}
-  .card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px}
-  h1{font-size:18px;margin:0}
-  nav{color:#64748b;font-size:13px}
-  h2{font-size:18px;margin:0 0 10px 0}
-  .muted{color:#64748b}
-  .btn{display:inline-block;border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px;background:#f8fafc;color:#0f172a;text-decoration:none;font-size:14px}
-  .btn:hover{background:#eef2f7}
-  .grid{display:grid;gap:16px}
-  .g12{grid-template-columns:repeat(12,1fr)}
-  .col-4{grid-column:span 4} .col-6{grid-column:span 6} .col-8{grid-column:span 8} .col-12{grid-column:span 12}
-  .row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
-  label{font-size:14px;display:block;margin:6px 0 2px 0}
-  input,select,textarea{width:100%;padding:8px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;background:#fff;color:#0f172a}
-  table{width:100%;border-collapse:collapse;font-size:14px}
-  th,td{text-align:left;padding:10px;border-top:1px solid #e2e8f0}
-  thead th{color:#64748b;font-weight:600;border-top:none}
-  .kpi{border:1px solid #e2e8f0;border-radius:10px;padding:12px}
-  .kpi .lbl{color:#64748b;font-size:12px} .kpi .val{font-size:22px;font-weight:700}
-  .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#e5e7eb;color:#111827}
-  a.link{color:#1d4ed8;text-decoration:underline}
-</style>
-</head><body>
-<header><div class="layout bar"><h1>Hearty Pro — MVP (Wireframes)</h1><nav>Doctor › Studie</nav></div></header>
-<main class="layout">
-  <div class="grid g12">
-    <section class="col-7 card">
-      <h2>ECG Viewer (PDF)</h2>
-      <div style="border:1px dashed #cbd5e1;border-radius:8px;height:260px;display:flex;align-items:center;justify-content:center;color:#94a3b8">[PDF here]</div>
-    </section>
-    <section class="col-5 card">
-      <h2>Medical report</h2>
-      <div><label>IA Diagnosis(suggested)</label><div class="card" style="padding:8px;background:#f8fafc">Normal sinus rhythm</div></div>
-      <div><label>Medical Diagnosis</label><input placeholder="Ingrese su interpretación"/></div>
-      <div><label>Observations</label><textarea rows="3"></textarea></div>
-      <div><label>Discrepancy (Doctor vs IA)</label>
-        <select><option>No discrepancy</option><option>Low discrepancy</option><option>High discrepancy</option></select>
-        <div class="muted" style="font-size:12px;margin-top:4px">Required field for report signing.</div>
-      </div>
-      <div class="row" style="margin-top:8px">
-        <a class="btn" href="#">Save draft</a><a class="btn" href="#">Sign</a><a class="btn" href="#">Return</a>
-      </div>
-    </section>
-  </div></main>
-<footer><div class="layout bar"><div class="muted">Hearty Pro MVP (offline)</div></div></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study — Medical Report</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:#f6f7fb;
+      color:#0f172a;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Arial,sans-serif;
+    }
+    .layout{
+      max-width:1080px;              /* más angosto y centrado */
+      margin:0 auto;
+    }
+    header,footer{
+      background:#fff;
+      border-bottom:1px solid #e2e8f0;
+    }
+    footer{
+      border-top:1px solid #e2e8f0;
+      border-bottom:none;
+    }
+    .bar{
+      padding:14px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    main{
+      padding:24px 20px 32px 20px;
+    }
+    h1{
+      font-size:18px;
+      margin:0;
+    }
+    nav{
+      color:#64748b;
+      font-size:13px;
+    }
+    h2{
+      font-size:18px;
+      margin:0 0 10px 0;
+    }
+    .muted{
+      color:#64748b;
+      font-size:12px;
+    }
+    .grid-two{
+      display:grid;
+      grid-template-columns:3fr 2fr;   /* 60% / 40% */
+      gap:18px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid #e2e8f0;
+      border-radius:10px;
+      padding:16px 16px 18px 16px;
+      height:100%;
+    }
+    .viewer-box{
+      border:1px dashed #cbd5e1;
+      border-radius:10px;
+      height:420px;                   /* un poco más alto para que llene mejor */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#94a3b8;
+      font-size:14px;
+    }
+    label{
+      font-size:14px;
+      display:block;
+      margin:8px 0 4px 0;
+    }
+    input,select,textarea{
+      width:100%;
+      padding:8px 10px;
+      border:1px solid #cbd5e1;
+      border-radius:8px;
+      font-size:14px;
+      background:#fff;
+      color:#0f172a;
+    }
+    textarea{resize:vertical;min-height:70px}
+    .row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:flex-end;
+    }
+    .pill{
+      border-radius:8px;
+      padding:8px 10px;
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+      font-size:14px;
+    }
+    .btn{
+      display:inline-block;
+      border:1px solid #cbd5e1;
+      border-radius:8px;
+      padding:8px 12px;
+      background:#f8fafc;
+      color:#0f172a;
+      text-decoration:none;
+      font-size:14px;
+    }
+    .btn:hover{
+      background:#eef2f7;
+    }
+    .btn-primary{
+      background:#111827;
+      color:#fff;
+      border-color:#111827;
+    }
+    .btn-primary:hover{
+      background:#020617;
+    }
+    @media (max-width: 900px){
+      .grid-two{
+        grid-template-columns:1fr;     /* stack en mobile */
+      }
+      .viewer-box{
+        height:320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="layout bar">
+      <h1>Hearty Pro — MVP (Wireframes)</h1>
+      <nav>Doctor › Study</nav>
+    </div>
+  </header>
+
+  <main class="layout">
+    <div class="grid-two">
+      <!-- Columna izquierda: visor -->
+      <section class="card">
+        <h2>ECG Viewer (PDF)</h2>
+        <div class="viewer-box">
+          [PDF here]
+        </div>
+        <p class="muted" style="margin-top:10px">
+          In real version here goes the PDF / ECG viewer.          
+        </p>
+      </section>
+
+      <!-- Columna derecha: formulario del médico -->
+      <section class="card">
+        <h2>Medical report</h2>
+
+        <div style="margin-bottom:6px">
+          <label>IA Diagnosis(suggested)</label>
+          <div class="pill">Normal sinus rhythm</div>
+        </div>
+
+        <div>
+          <label>Medical diagnosis</label>
+          <input placeholder="Enter your clinical interpretation"/>
+        </div>
+
+        <div>
+          <label>Notes</label>
+          <textarea placeholder="Relevant findings, clinical correlation, etc.."></textarea>
+        </div>
+
+        <div>
+          <label>Discrepancy (Doctor vs IA)</label>
+          <select>
+            <option>No discrepancy</option>
+            <option>Low discrepancy</option>
+            <option>High discrepancy</option>
+          </select>
+          <div class="muted" style="margin-top:4px">
+            Required field for report signing.
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:14px">
+          <a class="btn" href="#">Save draft</a>
+          <a class="btn btn-primary" href="#">Sign report</a>
+          <a class="btn" href="med_inbox.html" style="margin-left:auto">Back to inbox</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="layout bar">
+      <div class="muted">Hearty Pro MVP (offline)</div>
+    </div>
+  </footer>
+</body>
+</html>
