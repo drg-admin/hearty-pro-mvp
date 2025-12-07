@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Usage / Consumption — Hearty Pro</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+
+<header>
+    <div class="nav-wrapper">
+        <h1>Hearty Pro — MVP (Wireframes)</h1>
+        <nav>SaaS Administration › Usage / Consumption</nav>
+    </div>
+</header>
+
+<main class="layout">
+
+    <div class="card">
+
+        <h2>Usage / Consumption</h2>
+
+        <div class="filters-bar">
+
+            <div class="filter">
+                <label for="date_from">From</label>
+                <input id="date_from" type="date"/>
+            </div>
+
+            <div class="filter">
+                <label for="date_to">To</label>
+                <input id="date_to" type="date"/>
+            </div>
+
+            <div class="filter">
+                <label for="group_by">Group By</label>
+                <select id="group_by">
+                    <option>Tenant</option>
+                    <option>Plan</option>
+                    <option>Month</option>
+                </select>
+            </div>
+
+            <button class="primary">Apply</button>
+
+        </div>
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Tenant</th>
+                    <th>Plan</th>
+                    <th>Period</th>
+                    <th>Studies Used</th>
+                    <th>Limit</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>[Tenant]</td>
+                    <td>[Plan]</td>
+                    <td>[Month / Range]</td>
+                    <td>120</td>
+                    <td>300</td>
+                    <td>40%</td>
+                </tr>
+
+                <tr>
+                    <td>[Tenant 2]</td>
+                    <td>[Plan 2]</td>
+                    <td>[Month / Range]</td>
+                    <td>280</td>
+                    <td>300</td>
+                    <td>93%</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<footer>
+  <div class="footer-wrapper">
+      <div class="footer-text">© 2025 — Hearty Pro MVP (offline)</div>
+  </div>
+</footer>
+
+</body>
+</html>
