@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Subir estudio (PDF) — Technician</title>
+<title>Upload study (PDF) — Technician</title>
 <style>
 *{box-sizing:border-box} body{margin:0;background:#f6f7fb;color:#0f172a}
 .layout{max-width:1120px;margin:0 auto}
@@ -20,37 +20,37 @@ input,select,textarea{width:100%;padding:8px 10px;border:1px solid #cbd5e1;borde
 </style>
 </head>
 <body>
-<header><div class="layout bar"><h1>Hearty Pro — MVP (Wireframes)</h1><nav>Inicio › Cargas técnicas › Subir PDF</nav></div></header>
+<header><div class="layout bar"><h1>Hearty Pro — MVP (Wireframes)</h1><nav>Home › Technician upload › Upload PDF</nav></div></header>
 <main class="layout">
   <div class="card">
-    <h2>Subir estudio (PDF)</h2>
+    <h2>Upload (PDF)</h2>
     <div class="row" style="margin-top:8px">
       <div style="flex:1 1 320px">
-        <label>Archivo PDF</label>
+        <label>File PDF</label>
         <input type="file" accept="application/pdf"/>
       </div>
       <div style="flex:1 1 200px">
-        <label>Fecha del estudio</label>
+        <label>Date</label>
         <input type="date"/>
       </div>
       <div style="flex:1 1 200px">
-        <label>ID Paciente (opcional)</label>
+        <label>Patient's ID (optional)</label>
         <input placeholder="Ej: HCN-12345"/>
       </div>
       <div style="flex:1 1 260px">
-        <label>Nodo (institución)</label>
+        <label>Node (institution)</label>
         <select><option>Hospital Central</option><option>Hospital del Sur</option></select>
       </div>
       <div style="flex:1 1 100%">
-        <label>Observaciones (opc.)</label>
-        <textarea rows="3" placeholder="Notas para el médico"></textarea>
+        <label>Observations (opc.)</label>
+        <textarea rows="3" placeholder="Doctor's notes"></textarea>
       </div>
     </div>
     <div class="row" style="margin-top:12px">
-      <a class="btn" href="tech_study_view.html?new=1">Subir</a>
-      <a class="btn" href="tech_my_uploads.html">Cancelar</a>
+      <a class="btn" href="tech_study_view.html?new=1">Upload</a>
+      <a class="btn" href="tech_my_uploads.html">Cancel</a>
     </div>
-    <div class="muted" style="margin-top:8px">MVP: el botón “Subir” navega al detalle simulado. En la app real acá se enviaría el archivo.</div>
+    <div class="muted" style="margin-top:8px">MVP: “Upload” button goes to detail. In real app here is where file is posted.</div>
   </div>
 </main>
 <footer><div class="layout bar"><div class="muted">Hearty Pro MVP (offline)</div></div></footer>
